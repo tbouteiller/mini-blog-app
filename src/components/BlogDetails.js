@@ -21,7 +21,6 @@ function BlogDetails() {
 
   const handleDelete = (id) => {
     firestore.collection("posts").doc(id).delete();
-    //setBlogs(blogs.filter((blog) => blog.id !== id));
     history.push("/");
   };
 
