@@ -11,12 +11,12 @@ function BlogDetails() {
   const history = useHistory();
 
   useEffect(() => {
-    const fetch = async () => {
-      const data = await firestore.collection("posts").get();
-      setBlogs(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
-    };
-
-    fetch();
+    const unsubscribe = firestore.collection("posts").onSnapshot((snapshot) => {
+      const data = [];
+      snapshot.forEach((doc) => data.push({ ...doc.data(), id: doc.id }));
+      setBlogs(data);
+    });
+    return unsubscribe;
   }, []);
 
   const handleDelete = (id) => {

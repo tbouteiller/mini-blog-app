@@ -8,15 +8,16 @@ function Home() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const fetch = async () => {
-      const data = await firestore
-        .collection("posts")
-        .orderBy("date", "desc")
-        .get();
-      setBlogs(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
-      setIsLoading(false);
-    };
-    fetch();
+    const unsubscribe = firestore
+      .collection("posts")
+      .orderBy("date", "desc")
+      .onSnapshot((snapshot) => {
+        const data = [];
+        snapshot.forEach((doc) => data.push({ ...doc.data(), id: doc.id }));
+        setIsLoading(false);
+        setBlogs(data);
+      });
+    return unsubscribe;
   }, []);
 
   return (
