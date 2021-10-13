@@ -1,8 +1,24 @@
-# Getting Started with Create React App
+# Mini-Blog-App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+I created this blog with [create-react-app](https://reactjs.org/docs/create-a-new-react-app.html) to help me with learning the React library.
 
-## Available Scripts
+This Project includes:
+
+- Firebase's Firestore Database to store the user's id and specifc blog post details.
+- Firestore snapshots to get realtime updates from the database.
+- React-router-dom to incorporate Routes and Links into the app.
+- useState, useEffect, useParams, and useHistory React hooks.
+
+Channels I referenced for learning purposes:
+
+- [The Net Ninja](https://www.youtube.com/c/TheNetNinja)
+- [freeCodeCamp.org](https://www.youtube.com/c/Freecodecamp)
+
+## Firebase Documentation
+
+To learn more about Firebase, check out the [Firebase documentation](https://firebase.google.com/docs).
+
+## Create-React-App Instructions
 
 In the project directory, you can run:
 
@@ -44,27 +60,3 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
